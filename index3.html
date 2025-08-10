@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotics Framework & Synthetic Data</title>
+    <!-- Google Fonts for professional typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS for animations and enterprise styling -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        @keyframes fadeInLeft {
+            from {
+                transform: translateX(-30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInRight {
+            from {
+                transform: translateX(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .animate-left {
+            animation: fadeInLeft 0.5s ease-out forwards;
+        }
+        .animate-right {
+            animation: fadeInRight 0.5s ease-out forwards;
+        }
+        /* Enterprise-grade adjustments: Subdued colors, more padding */
+        header {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .hero-bg {
+            background: linear-gradient(to bottom right, #f9fafb, #f3f4f6);
+        }
+        .btn-primary {
+            background-color: #4f46e5; /* indigo-600 */
+            transition: background-color 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #4338ca; /* indigo-700 */
+        }
+        .btn-secondary {
+            border-color: #d1d5db; /* gray-300 */
+            transition: border-color 0.3s;
+        }
+        .btn-secondary:hover {
+            border-color: #9ca3af; /* gray-400 */
+        }
+        section {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+        h2, h3, h4 {
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50 text-gray-900">
+    <!-- Header -->
+    <header class="bg-white shadow">
+        <div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-indigo-600 to-cyan-400 flex items-center justify-center text-white font-bold text-xl">RF</div>
+                <div>
+                    <h1 class="text-xl font-bold">Robotics Framework</h1>
+                    <p class="text-sm text-gray-500">Synthetic Robotics Data Solutions</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex gap-8 text-base font-medium">
+                <a href="#features" class="hover:text-indigo-600 transition">Features</a>
+                <a href="#roadmap" class="hover:text-indigo-600 transition">Roadmap</a>
+                <a href="#data" class="hover:text-indigo-600 transition">Data Strategy</a>
+                <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
+            </nav>
+            <div class="flex gap-4">
+                <a class="px-5 py-2.5 rounded-md btn-primary text-white text-base font-medium" href="#contact">Request Pilot</a>
+                <a class="px-5 py-2.5 rounded-md btn-secondary text-gray-700 text-base font-medium" href="#">Download Deck</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center hero-bg">
+        <div class="space-y-8 animate-left">
+            <h2 class="text-5xl font-bold leading-tight">Train Robots Faster — With Confidence</h2>
+            <p class="text-xl text-gray-600 leading-relaxed">We deliver the training framework and datasets for next-generation humanoids and industrial robots. Minimize real-world testing, accelerate deployment, and secure the data that drives success.</p>
+            <div class="flex gap-4">
+                <a href="#contact" class="px-8 py-4 rounded-md btn-primary text-white font-semibold">Start a Pilot</a>
+                <a href="#roadmap" class="px-8 py-4 rounded-md btn-secondary font-semibold">See Roadmap</a>
+            </div>
+            <div class="mt-6 grid grid-cols-3 gap-6 text-base text-gray-600">
+                <div class="p-4 bg-white rounded-lg shadow-md">Simulation: Isaac Sim, Unity</div>
+                <div class="p-4 bg-white rounded-lg shadow-md">RL: PPO, SAC, Distributed</div>
+                <div class="p-4 bg-white rounded-lg shadow-md">LLM: LLaMA 3 Integration</div>
+            </div>
+        </div>
+
+        <div class="rounded-xl bg-white p-8 shadow-lg animate-right">
+            <!-- Embedded Robot Simulation Video (NVIDIA Isaac Sim Demo) -->
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/lcee9ntkOjk" title="NVIDIA Isaac Sim - Powering Robotics Development" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <p class="mt-6 text-base text-gray-500">Explore our full roadmap and hybrid data strategy. Download decks for detailed insights.</p>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="max-w-7xl mx-auto px-6 py-16 bg-white">
+        <h3 class="text-3xl font-bold mb-10 text-center">Core Capabilities</h3>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg transition">
+                <h4 class="text-xl font-semibold mb-4">Simulation-First Framework</h4>
+                <p class="text-base text-gray-600">High-fidelity integration with Isaac Sim, Unity, and MuJoCo for scalable RL training.</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg transition">
+                <h4 class="text-xl font-semibold mb-4">Hybrid Datasets</h4>
+                <p class="text-base text-gray-600">Combine synthetic bulk data with real-robot fine-tuning to bridge the Sim2Real gap.</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg transition">
+                <h4 class="text-xl font-semibold mb-4">LLM Task Planning</h4>
+                <p class="text-base text-gray-600">Natural-language task specification translated to policies using LLaMA-family models.</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg transition">
+                <h4 class="text-xl font-semibold mb-4">Data-as-a-Service</h4>
+                <p class="text-base text-gray-600">Self-service dataset generation and custom licensing for enterprise clients.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section id="roadmap" class="max-w-7xl mx-auto px-6 py-16">
+        <div class="flex flex-col md:flex-row items-start gap-12">
+            <div class="w-full md:w-2/3">
+                <h3 class="text-3xl font-bold mb-6">2-Year Roadmap</h3>
+                <p class="text-base text-gray-600 mb-8">Quarterly milestones for framework development and hybrid data acquisition.</p>
+
+                <div class="space-y-6">
+                    <div class="flex items-start gap-6">
+                        <div class="w-32 text-base font-medium text-indigo-600">Q1 (M1–3)</div>
+                        <div>
+                            <h4 class="text-lg font-semibold">Incorporate & Prototype</h4>
+                            <p class="text-base text-gray-600">Choose simulation engine, build minimal RL prototype, create initial synthetic envs.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-6">
+                        <div class="w-32 text-base font-medium text-indigo-600">Q2 (M4–6)</div>
+                        <div>
+                            <h4 class="text-lg font-semibold">Sim2Real Validation</h4>
+                            <p class="text-base text-gray-600">Run small real-robot trials, expand datasets, early demo.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-6">
+                        <div class="w-32 text-base font-medium text-indigo-600">Q3 (M7–9)</div>
+                        <div>
+                            <h4 class="text-lg font-semibold">Beta & Cloud</h4>
+                            <p class="text-base text-gray-600">Cloud training jobs, LLM planning, dataset catalog.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-6">
+                        <div class="w-32 text-base font-medium text-indigo-600">Q4 (M10–12)</div>
+                        <div>
+                            <h4 class="text-lg font-semibold">Market Entry</h4>
+                            <p class="text-base text-gray-600">SDK beta, dataset licensing, pilot customers.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-6">
+                        <div class="w-32 text-base font-medium text-indigo-600">Y2 Q1 (M13–15)</div>
+                        <div>
+                            <h4 class="text-lg font-semibold">Scale</h4>
+                            <p class="text-base text-gray-600">Distributed training, full LLM-in-the-loop, hazardous envs.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-6">
+                        <div class="w-32 text-base font-medium text-indigo-600">Y2 Q2 (M16–18)</div>
+                        <div>
+                            <h4 class="text-lg font-semibold">Ecosystem</h4>
+                            <p class="text-base text-gray-600">Plugin system, multi-agent support, dataset marketplace.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-6">
+                        <div class="w-32 text-base font-medium text-indigo-600">Y2 Q3 (M19–21)</div>
+                        <div>
+                            <h4 class="text-lg font-semibold">Embed</h4>
+                            <p class="text-base text-gray-600">Embedded deployment, tactile/haptic datasets.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-6">
+                        <div class="w-32 text-base font-medium text-indigo-600">Y2 Q4 (M22–24)</div>
+                        <div>
+                            <h4 class="text-lg font-semibold">Market Leader</h4>
+                            <p class="text-base text-gray-600">Publish benchmarks, vertical modules, Series A.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full md:w-1/3 bg-gray-50 p-8 rounded-xl shadow-md">
+                <h4 class="text-xl font-bold mb-4">Hybrid Data Mix</h4>
+                <p class="text-base text-gray-700 mb-6">Recommended split: <span class="font-semibold">80% synthetic</span> + <span class="font-semibold">20% real-robot</span> for training and validation.</p>
+
+                <div>
+                    <h5 class="text-lg font-medium mb-3">Phase Highlights</h5>
+                    <ul class="text-base text-gray-600 list-disc list-inside space-y-2">
+                        <li>Phase 1: Simulation validation with small robot trials</li>
+                        <li>Phase 2: Lab-scale hybrid training</li>
+                        <li>Phase 3: Distributed collection & partner programs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Strategy -->
+    <section id="data" class="max-w-7xl mx-auto px-6 py-16 bg-white">
+        <h3 class="text-3xl font-bold mb-10 text-center">Hybrid Data Acquisition Strategy</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                <h4 class="text-xl font-semibold mb-4">Phase 1 (M1–6)</h4>
+                <p class="text-base text-gray-600 mb-6">Synthetic-first envs + small-scale real-robot validation. Cost estimate: $50K–$80K.</p>
+                <h4 class="text-xl font-semibold mb-4">Phase 2 (M7–12)</h4>
+                <p class="text-base text-gray-600">Hybrid training with 2–3 lab robots. Cost estimate: $120K–$200K.</p>
+            </div>
+
+            <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                <h4 class="text-xl font-semibold mb-4">Phase 3 (M13–24)</h4>
+                <p class="text-base text-gray-600 mb-6">Distributed kits, partner data exchange program, and large-scale hybrid dataset. Cost estimate: $250K–$500K.</p>
+                <h4 class="text-xl font-semibold mb-4">Partnership Models</h4>
+                <ul class="text-base text-gray-600 list-disc list-inside space-y-2">
+                    <li>Universities & research labs</li>
+                    <li>Robotics OEM co-development</li>
+                    <li>Enterprise pilots (warehouses, factories)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA & Contact -->
+    <section id="contact" class="max-w-7xl mx-auto px-6 py-16 bg-gradient-to-r from-indigo-700 to-cyan-500 text-white rounded-xl mt-8 shadow-lg">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h3 class="text-3xl font-bold mb-4">Ready to Pilot?</h3>
+                <p class="text-lg leading-relaxed">Request a pilot, access our dataset catalog, or inquire about custom datasets — partner with us to accelerate your robot deployment.</p>
+            </div>
+            <div class="flex flex-col gap-4">
+                <a class="px-6 py-4 bg-white text-indigo-700 rounded-md text-center font-semibold hover:bg-gray-100 transition" href="#">Request Pilot</a>
+                <a class="px-6 py-4 bg-white/20 border border-white rounded-md text-center font-semibold hover:bg-white/30 transition" href="#">Contact Sales</a>
+                <a class="px-6 py-4 bg-white/10 rounded-md text-center font-semibold hover:bg-white/20 transition" href="#">Download Roadmap Deck</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="mt-16 py-10 text-base text-center text-gray-500 bg-white">
+        © 2025 Robotics Training Framework & Synthetic Robotics Data — All rights reserved.
+    </footer>
+</body>
+</html>
+```
